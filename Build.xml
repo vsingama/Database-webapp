@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CS681Project" default="run" basedir=".">
+	
+	<property environment="env"/>
+	<property name="lib.dir" location="lib"/>
+	<property name="classes" location="bin"/>
+
+	<path id="project.classpath">
+		<pathelement location="bin"/>
+
+<fileset dir="${lib.dir}" includes="mysql-connector-java-5.1.18-bin.jar"/>
+	</path>
+
+<target name="run" depends="compile">
+		<java fork="yes" failonerror="true" classname="com.db.web.application.TinyHttpd4Server" 
+			dir="${basedir}">
+			<classpath refid="project.classpath" /> 
+		</java>
+</target>
+	
+	
+	
+	<target name="compile" depends="make">
+		
+		<javac destdir="${classes}" debug="on" includeantruntime="false">
+			<src path="src"/>
+			<classpath refid="project.classpath"/>
+		</javac>
+	</target>
+		
+
+<target name="remove">
+		<delete dir="${classes}"/>
+	</target>
+	
+	<target name="make" depends="remove">
+			<mkdir dir="${classes}"/>
+	</target>
+	
+	
+</project>
+
+
