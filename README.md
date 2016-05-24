@@ -8,7 +8,7 @@ Requirements:
 					Project details and execution steps
 					
 Implementation details
-When we execute the project, the JDBC class will check for the existence of ìdbprojectî 
+When we execute the project, the JDBC class will check for the existence of ‚Äúdbproject‚Äù 
 database in local MySQL server. 
 	If the db is present, then it will check for the tables and data. 
 	If the db is not present, "dbproject" db will be created and the corresponding tables will 
@@ -20,13 +20,13 @@ be checked for the requested file (default is index.html)and the data will be fe
 be displayed on the web browser.
 
 The following are implemented in this project
-Persistent Connection
-HTTP post form
-Thread Pool
-Access Counter
-Caching (LFU, LRU)
-JDBC class for Storing files and data in MYSQL database 
-Code in Object oriented fashion
+1) Persistent Connection
+2) HTTP post form
+3) Thread Pool
+4) Access Counter
+5) Caching (LFU, LRU)
+6) JDBC class for Storing files and data in MYSQL database 
+7) Code in Object oriented fashion
 
 Execution plan:
 Before executing the project, please change the following properties for MySQL db in JDBCTest.java, line 
